@@ -1,20 +1,23 @@
 //
-//  PaypalPaymentService.m
+//  ApplePaymentService.m
 //  Payments
 //
 //  Created by Andrew on 2017-10-06.
 //  Copyright © 2017 Andrew. All rights reserved.
 //
 
-#import "PaypalPaymentService.h"
+#import "ApplePaymentService.h"
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
-@implementation PaypalPaymentService
+@implementation ApplePaymentService
 
-- (void)processPaymentAmount:(NSInteger)amount {
-    NSLog(@"Paypal Payment Processed $%lu", amount);
-}
-- (bool)canProcessPayment {
+- (bool)canProcessPayment { 
     return arc4random_uniform(2);
 }
+
+- (void)processPaymentAmount:(NSInteger)amount { 
+    NSLog(@"Apple Payment Processed $%lu", amount);
+
+}
+
 @end

@@ -15,4 +15,9 @@
     NSLog(@"Stripe Payment Processed $%lu", amount);
 }
 
+- (bool)canProcessPayment {
+    return arc4random_uniform(2);
+}
+
+
 @end
