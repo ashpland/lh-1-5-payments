@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		497C2EFA1F8843C700D616D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2EF91F8843C700D616D7 /* main.m */; };
 		497C2F021F8844EB00D616D7 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2F001F8844EB00D616D7 /* InputCollector.m */; };
+		497C2F051F8847E900D616D7 /* PaymentGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2F041F8847E900D616D7 /* PaymentGateway.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		497C2EF91F8843C700D616D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		497C2F001F8844EB00D616D7 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
 		497C2F011F8844EB00D616D7 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
+		497C2F031F8847E900D616D7 /* PaymentGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentGateway.h; sourceTree = "<group>"; };
+		497C2F041F8847E900D616D7 /* PaymentGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentGateway.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				497C2F011F8844EB00D616D7 /* InputCollector.h */,
 				497C2F001F8844EB00D616D7 /* InputCollector.m */,
 				497C2EF91F8843C700D616D7 /* main.m */,
+				497C2F031F8847E900D616D7 /* PaymentGateway.h */,
+				497C2F041F8847E900D616D7 /* PaymentGateway.m */,
 			);
 			path = Payments;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497C2F051F8847E900D616D7 /* PaymentGateway.m in Sources */,
 				497C2F021F8844EB00D616D7 /* InputCollector.m in Sources */,
 				497C2EFA1F8843C700D616D7 /* main.m in Sources */,
 			);

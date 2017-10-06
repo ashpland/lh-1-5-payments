@@ -9,20 +9,25 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "PaymentGateway.h"
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        int dollarValue = arc4random_uniform(1100) + 100;
-        NSLog(@"Thank you for shopping at Acme.com\nYour total today is $%d\nPlease select your payment method:\n1: Paypal, 2: Stripe, 3: Amazon", dollarValue);
+        NSInteger dollarValue = arc4random_uniform(1100) + 100;
+        NSLog(@"Thank you for shopping at Acme.com\nYour total today is $%ld\nPlease select your payment method:\n1: Paypal, 2: Stripe, 3: Amazon", (long)dollarValue);
         
         NSString *responseString = [InputCollector inputForPrompt:@""];
         
-        int responseInt = (int)[responseString integerValue];
+        NSInteger responseInt = [responseString integerValue];
         
-        NSLog(@"%d", responseInt);
+        PaymentGateway *paymentGateway = [PaymentGateway new];
+        [paymentGateway processPaymentAmount:dollarValue];
+        
+        
+        NSLog(@"%ld", (long)responseInt);
     
     }
     return 0;
