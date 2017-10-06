@@ -10,6 +10,9 @@
 		497C2EFA1F8843C700D616D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2EF91F8843C700D616D7 /* main.m */; };
 		497C2F021F8844EB00D616D7 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2F001F8844EB00D616D7 /* InputCollector.m */; };
 		497C2F051F8847E900D616D7 /* PaymentGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2F041F8847E900D616D7 /* PaymentGateway.m */; };
+		497C2F081F8848F900D616D7 /* PaypalPaymentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2F071F8848F900D616D7 /* PaypalPaymentService.m */; };
+		497C2F0B1F88490500D616D7 /* StripePaymentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2F0A1F88490500D616D7 /* StripePaymentService.m */; };
+		497C2F0E1F88490C00D616D7 /* AmazonPaymentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 497C2F0D1F88490C00D616D7 /* AmazonPaymentService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +34,12 @@
 		497C2F011F8844EB00D616D7 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
 		497C2F031F8847E900D616D7 /* PaymentGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentGateway.h; sourceTree = "<group>"; };
 		497C2F041F8847E900D616D7 /* PaymentGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentGateway.m; sourceTree = "<group>"; };
+		497C2F061F8848F900D616D7 /* PaypalPaymentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaypalPaymentService.h; sourceTree = "<group>"; };
+		497C2F071F8848F900D616D7 /* PaypalPaymentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaypalPaymentService.m; sourceTree = "<group>"; };
+		497C2F091F88490500D616D7 /* StripePaymentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripePaymentService.h; sourceTree = "<group>"; };
+		497C2F0A1F88490500D616D7 /* StripePaymentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripePaymentService.m; sourceTree = "<group>"; };
+		497C2F0C1F88490C00D616D7 /* AmazonPaymentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazonPaymentService.h; sourceTree = "<group>"; };
+		497C2F0D1F88490C00D616D7 /* AmazonPaymentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmazonPaymentService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +72,17 @@
 		497C2EF81F8843C700D616D7 /* Payments */ = {
 			isa = PBXGroup;
 			children = (
-				497C2F011F8844EB00D616D7 /* InputCollector.h */,
-				497C2F001F8844EB00D616D7 /* InputCollector.m */,
 				497C2EF91F8843C700D616D7 /* main.m */,
 				497C2F031F8847E900D616D7 /* PaymentGateway.h */,
 				497C2F041F8847E900D616D7 /* PaymentGateway.m */,
+				497C2F0C1F88490C00D616D7 /* AmazonPaymentService.h */,
+				497C2F0D1F88490C00D616D7 /* AmazonPaymentService.m */,
+				497C2F061F8848F900D616D7 /* PaypalPaymentService.h */,
+				497C2F071F8848F900D616D7 /* PaypalPaymentService.m */,
+				497C2F091F88490500D616D7 /* StripePaymentService.h */,
+				497C2F0A1F88490500D616D7 /* StripePaymentService.m */,
+				497C2F011F8844EB00D616D7 /* InputCollector.h */,
+				497C2F001F8844EB00D616D7 /* InputCollector.m */,
 			);
 			path = Payments;
 			sourceTree = "<group>";
@@ -129,9 +144,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497C2F0E1F88490C00D616D7 /* AmazonPaymentService.m in Sources */,
+				497C2F0B1F88490500D616D7 /* StripePaymentService.m in Sources */,
 				497C2F051F8847E900D616D7 /* PaymentGateway.m in Sources */,
 				497C2F021F8844EB00D616D7 /* InputCollector.m in Sources */,
 				497C2EFA1F8843C700D616D7 /* main.m in Sources */,
+				497C2F081F8848F900D616D7 /* PaypalPaymentService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,9 @@
 
 @implementation PaymentGateway
 
+-(void)processPaymentAmount:(NSInteger)amount
+{
+    [self.delegate processPaymentAmount:amount];
+}
+
 @end

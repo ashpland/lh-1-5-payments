@@ -10,25 +10,47 @@
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
 #import "PaymentGateway.h"
+#import "AmazonPaymentService.h"
+#import "PaypalPaymentService.h"
+#import "StripePaymentService.h"
+
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSInteger dollarValue = arc4random_uniform(1100) + 100;
+        NSInteger dollarValue = arc4random_uniform(900) + 100;
         NSLog(@"Thank you for shopping at Acme.com\nYour total today is $%ld\nPlease select your payment method:\n1: Paypal, 2: Stripe, 3: Amazon", (long)dollarValue);
         
         NSString *responseString = [InputCollector inputForPrompt:@""];
         
         NSInteger responseInt = [responseString integerValue];
         
+        id<PaymentDelegate> paymentMethod;
+        
+        switch (responseInt) {
+            case 1:
+                paymentMethod = [PaypalPaymentService new];
+                break;
+            
+            case 2:
+                paymentMethod = [StripePaymentService new];
+                break;
+            
+            case 3:
+                paymentMethod = [AmazonPaymentService new];
+                break;
+
+            default:
+                NSLog(@"That's not a valid choice 😕");
+                break;
+        }
+        
         PaymentGateway *paymentGateway = [PaymentGateway new];
+        paymentGateway.delegate = paymentMethod;
         [paymentGateway processPaymentAmount:dollarValue];
         
-        
-        NSLog(@"%ld", (long)responseInt);
-    
     }
     return 0;
 }
